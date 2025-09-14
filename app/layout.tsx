@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         alt: "Car Locksmith Sydney Services",
       },
     ],
-    locale: "en_US", // correct locale for .com
+    locale: "en_US",
     type: "website",
   },
   alternates: {
@@ -45,6 +45,13 @@ export const metadata: Metadata = {
     },
   },
   generator: "Next.js",
+
+  // ✅ Favicon added here
+  icons: {
+    icon: "/favicon.ico", // yeh file tum public/ folder me rakho
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
@@ -58,7 +65,6 @@ export default function RootLayout({
         <SchemaMarkup />
       </head>
       <body className={inter.className} suppressHydrationWarning>
-  
         <main className="pt-8">{children}</main>
         <Footer />
       </body>
